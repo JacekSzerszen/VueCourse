@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<title>kolekcja11</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="sklep.css">
+</head>
+
+<body>
+    <button onclick="dekoduj()">start</button>
+    <button onclick="teraz()">strat</button>
+<input type="licz" id="imie" name="imie"
+min="1" max="200">
+
+<p id="wynik"></p>
+<p id="wynik2"></p>
+<script>
+
+function szescian(x){
+return x * x * x;
+}
+
+function kwadrat(y){
+return y * y;
+}
+
+function dekoduj(kod,klucz){
+         let text = "";
+         for(let x in kod){
+            if(x != klucz){
+        text += x;
+            }}
+            return text;
+
+            document.getElementById("wynik2")=dekoduj('zzzzzwzzziztahzz swzzzizezzczize', 'z');
+        }
+
+
+function teraz(){
+var liczba = parseInt(document.getElementById("imie").value);
+
+document.getElementById("wynik").innerHTML = kwadrat(liczba);
+}
+
+
+
+</script>
+</body>
